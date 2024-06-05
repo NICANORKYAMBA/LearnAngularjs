@@ -1,0 +1,84 @@
+$primary-color: #00aced;
+$secondary-color: #f5f5f5;
+$tertiary-color: #f5f5f5;
+$background-color: #00aced;
+
+.header {
+  background-color: $background-color;
+  color: $secondary-color;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack links vertically by default */
+  align-items: center; /* Center links horizontally */
+  max-height: 0; /* Initially hide links */
+  overflow: hidden; /* Clip overflowing content */
+  transition: max-height 0.3s ease-in-out; /* Smooth transition for opening/closing */
+}
+
+.nav-links li {
+  margin: 0.5rem 0; /* Adjust margin for stacked links */
+}
+
+.logo {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-right: 1rem;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-toggle {
+  display: none; /* Initially hide on larger screens */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) { // Target screens smaller than 768px
+  .header {
+    flex-wrap: wrap; /* Wrap header content on smaller screens */
+  }
+
+  .nav-links {
+    /* Removed default styles for smaller screens */
+  }
+
+  .nav-toggle {
+    display: block; /* Show hamburger menu on smaller screens */
+  }
+
+  .nav-links.show { /* Apply styles when navigation links are shown */
+    max-height: 200px; /* Adjust max-height for smaller screens */
+  }
+}

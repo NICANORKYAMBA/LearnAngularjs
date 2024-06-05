@@ -1,0 +1,59 @@
+<div class="main-feed">
+  <h2>Main Feed</h2>
+  <ul class="tweets">
+    <li class="tweet-list-item" *ngFor="let tweet of tweets">
+      <div class="tweet-header">
+        <img [src]="tweet.user.avatar" alt="User Avatar">
+        <span class="user-name">{{ tweet.user.username }}</span>
+        <span class="user-handle">{{ tweet.user.userhandle }}</span>
+      </div>
+      <div class="tweet-content">
+        <p>{{ tweet.content }}</p>
+        <div class="tweet-media" *ngIf="tweet.media">
+          <img *ngFor="let mediaUrl of tweet.media" [src]="mediaUrl" alt="Tweet Media">
+        </div>
+      </div>
+      <div class="tweet-actions">
+        <div class="action">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span class="count">{{ tweet.actions.likes }}</span>
+        </div>
+        <div class="action">
+          <span class="icon">
+            <i class="fas fa-retweet"></i>
+          </span>
+          <span class="count">{{ tweet.actions.retweets }}</span>
+        </div>
+        <div class="action">
+          <span class="icon">
+            <i class="fas fa-comment"></i>
+          </span>
+          <span class="count">{{ tweet.actions.replies }}</span>
+        </div>
+        <div class="action">
+          <span class="icon">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+          <span class="count">{{ tweet.actions.stats }}</span>
+        </div>
+        <div class="action">
+          <span class="icon">
+            <i class="fas fa-flag"></i>
+          </span>
+          <span class="count">{{ tweet.actions.view }}</span>
+        </div>
+        <div class="action">
+          <span class="icon">
+            <i class="fas fa-share"></i>
+          </span>
+          <span class="count">{{ tweet.actions.share }}</span>
+        </div>
+      </div>
+      <div class="tweet-timestamp">
+        <span>{{ tweet.timestamp }}</span>
+      </div>
+    </li>
+  </ul>
+</div>

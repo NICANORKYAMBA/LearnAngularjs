@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+
+$primary-color: #00aced;
+$secondary-color: #f5f5f5;
+$text-color: #333;
+$link-color: $primary-color;
+
+$font-family: 'Roboto', sans-serif;
+
+.main-feed {
+  background-color: $secondary-color;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-feed h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid $primary-color;
+  padding-bottom: 0.5rem;
+  color: $text-color;
+}
+
+.tweets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.tweet-list-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.tweet-list-item:last-child {
+  border-bottom: none;
+}
+
+.tweet-list-item:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.tweet-header img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.user-name {
+  font-weight: bold;
+  color: $text-color;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.user-handle {
+  font-size: 0.8rem;
+  color: $link-color;
+  text-decoration: none;
+}
+
+.tweet-content {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.tweet-content p {
+  color: $text-color;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.tweet-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.tweet-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: $text-color;
+}
+
+.tweet-actions .action {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.tweet-actions .action:hover {
+  color: $link-color;
+}
+
+.tweet-actions .icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.tweet-actions .count {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.tweet-timestamp {
+  font-size: 0.8rem;
+  color: $text-color;
+  margin-top: 0.5rem;
+  text-align: right;
+}

@@ -1,0 +1,15 @@
+<nav class="header">
+  <a class="logo" routerLink="/">Twitter</a>
+  <button class="nav-toggle" (click)="toggleNav()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul class="nav-links">
+    <li *ngFor="let link of navigationLinks">
+      <a routerLink="{{ link.path }}">{{ link.label }}</a>
+    </li>
+  </ul>
+  <div class="search-bar" *ngIf="showSearchBar">
+    <input type="text" placeholder="Search Twitter">
+    <button (click)="onSearch()">Search</button>
+  </div>
+</nav>
