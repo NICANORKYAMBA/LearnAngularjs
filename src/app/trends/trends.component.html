@@ -1,0 +1,8 @@
+<div class="trends">
+  <h3>Trends for you</h3>
+  <ul>
+    <li *ngFor="let trend of trends">
+      <a href="#">{{ trend.name }}</a> (#{{ trend.value }})
+    </li>
+  </ul>
+</div>

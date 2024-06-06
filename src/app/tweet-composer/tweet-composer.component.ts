@@ -68,15 +68,29 @@ export class TweetComposerComponent implements OnInit {
 		fileInput.click();
 	}
 
+	//openEmojiPicker() {
+	//	const picker = new emojione.Picker({
+	//		search: false,
+	//		onSelect: (emoji: string) => {
+	//			this.text += emoji.unicode;
+	//		},
+	//	});
+	//	picker.popupPicker();
+	//}
+
+	//insertEmoji(emoji: string) {
+	//	this.text += emoji;
+	//}
+
 	openEmojiPicker() {
 		const picker = new emojione.Picker({
-		onSelect: (emoji: string) => {
-			this.insertEmoji(emoji);
-		},
+			onSelect: (emoji: string) => {
+				this.insertEmoji(emoji);
+			},
 		});
 		picker.showPicker();
 	}
-
+	
 	insertEmoji(emoji: string) {
 		this.text += emoji;
 	}
