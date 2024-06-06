@@ -1,0 +1,37 @@
+<div class="tweet-composer">
+  <div class="tweet-composer-header">
+    <img *ngIf="image" src="{{ image }}" alt="Profile Image" />
+    <span class="tweet-composer-header-name">{{ name }}</span>
+  </div>
+  <textarea 
+    [(ngModel)]="text" 
+    placeholder="What's happenning?" 
+    maxlength="280">
+  </textarea>
+  <div class="tweet-composer-link" *ngIf="link">
+    <a href="{{ linkUrl }}" target="_blank">
+      <img *ngIf="linkImage" src="{{ linkImage }}" alt="Link Image" />
+      <span class="tweet-composer-link-text">{{ linkText }}</span>
+      <span class="tweet-composer-link-url">{{ linkUrl }}</span>
+    </a>
+  </div>
+  <div class="tweet-composer-media" *ngIf="linkMedia">
+    <span class="media-title">{{ linkMediaTitle }}</span>
+    <span class="media-description">{{ linkMediaDescription }}</span>
+    <img *ngIf="linkMediaImage" src="{{ linkMediaImage }}" alt="Media Image" />
+    <a href="{{ linkMediaUrl }}" target="_blank">
+      <span class="media-url">{{ linkMediaUrl }}</span>
+    </a>
+  </div>
+  <div class="tweet-composer-actions">
+    <button class="tweet-composer-action-button" (click)="openMediaUploader()">
+      <i class="fas fa-image"></i> Add Media
+    </button>
+    <button class="tweet-composer-action-button" (click)="openEmojiPicker()">
+      <i class="far fa-smile"></i> Add Emoji
+    </button>
+    <button class="tweet-composer-submit" (click)="submitTweet()">
+      Tweet
+    </button>
+  </div>
+</div>

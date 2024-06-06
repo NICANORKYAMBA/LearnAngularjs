@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MainFeedComponent } from './main-feed/main-feed.component';
+import { TweetComposerComponent } from './tweet-composer/tweet-composer.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { MainFeedComponent } from './main-feed/main-feed.component';
 	  RouterModule,
 	  HeaderComponent,
 	  MainFeedComponent,
+	  TweetComposerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
